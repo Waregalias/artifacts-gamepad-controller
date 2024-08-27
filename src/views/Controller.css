@@ -1,0 +1,13 @@
+.controller {
+    margin: 0 auto;
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+}
+
+.disc {
+    margin-right: 5px;
+    color: red;
+}
