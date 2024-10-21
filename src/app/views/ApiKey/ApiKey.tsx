@@ -1,9 +1,9 @@
 import {useState} from "react";
-import {Input} from "@/components/ui/input"
+import {Input} from "@/app/components/ui/input.tsx"
 import './ApiCaller.css';
-import {cn} from "@/lib/utils.ts";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card.tsx";
-import {Button} from "@/components/ui/button.tsx";
+import {cn} from "@/app/lib/utils.ts";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/app/components/ui/card.tsx";
+import {Button} from "@/app/components/ui/button.tsx";
 
 export function ApiKey({ apiKeyData }: any) {
   const [apiKey, setApiKey] = useState<string>('');

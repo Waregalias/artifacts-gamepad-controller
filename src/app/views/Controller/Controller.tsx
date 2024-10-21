@@ -1,6 +1,6 @@
 import './Controller.css';
-import Gamepad from "@/views/GamePad/Gamepad.tsx";
-import {ApiKey} from "@/views/ApiKey/ApiKey.tsx";
+import Gamepad from "@/app/views/Controller/GamePad/Gamepad.tsx";
+import {ApiKey} from "@/app/views/ApiKey/ApiKey.tsx";
 
 
 export function Controller() {

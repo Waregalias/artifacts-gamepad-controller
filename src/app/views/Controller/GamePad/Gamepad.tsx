@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import {useGamepads} from 'react-gamepads';
-import GamepadSvg from "@/views/GamePad/GamepadSvg";
-import {controllerToGamePadSVG} from "@/views/GamePad/GamePad.model.tsx";
-import {cn} from "@/lib/utils.ts";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card.tsx";
-import {Button} from "@/components/ui/button.tsx";
+import GamepadSvg from "@/app/views/Controller/GamePad/GamepadSvg.tsx";
+import {controllerToGamePadSVG} from "@/app/views/Controller/GamePad/GamePad.model.tsx";
+import {cn} from "@/app/lib/utils.ts";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/app/components/ui/card.tsx";
+import {Button} from "@/app/components/ui/button.tsx";
 import {Disc} from "lucide-react";
 
 
