@@ -7,38 +7,16 @@ import { useContext } from 'react'
 import { ThemeContext } from '../components/Provider'
 import Title from '../components/Title'
 
-function DashboardPage() {
+function ApiPage() {
     const theme = useContext(ThemeContext);
 
     return (
         <>
-            <Title title="Home" description="Discover a new songs from various muscian" />
-            <Card className='mt-10 border-dashed'>
-                <CardContent>
-                    <center>
-                        <Image
-                            className='m-10'
-                            width={300}
-                            height={300}
-                            priority
-                            src={theme?.theme === 'dark' ? "/team_engineering_white.svg" : "/team_engineering.svg"}
-                            alt="illustration.svg"
-                        />
-                        <CardHeader>
-                            <CardTitle className='font-bold'>{`That's It`}</CardTitle>
-                            <CardDescription className='text-slate-300'>Replace this with your content</CardDescription>
-                        </CardHeader>
-
-                        <Button asChild>
-                            <a href="https://ui.shadcn.com/">Shadcn UI</a>
-                        </Button>
-
-                    </center>
-                </CardContent>
-            </Card>
-
+            <div className="flex items-center justify-between w-full">
+                <span>Test</span>
+            </div>
         </>
     )
 }
 
-export default DashboardPage
+export default ApiPage

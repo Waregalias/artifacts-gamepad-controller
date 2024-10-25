@@ -36,6 +36,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
+    "react-gamepads": "^1.0.0",
     "react-hook-form": "^7.53.1",
     "react-toggle-dark-mode": "^1.1.1",
     "sonner": "^1.5.0",
