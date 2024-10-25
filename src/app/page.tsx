@@ -7,7 +7,8 @@ function Home() {
   router.replace('/home');
 
   return (
-    <></>
+    <>
+    </>
   )
 }
 

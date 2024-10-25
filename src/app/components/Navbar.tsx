@@ -24,22 +24,23 @@ export default function NavbarComponent() {
                     <div className="flex items-center">
                         <div className="sm:hidden">
                             <Sheet>
-                                <SheetTrigger className='text-white mt-2'><Menu /></SheetTrigger>
+                                <SheetTrigger className='text-white mt-2'><Menu/></SheetTrigger>
                                 <SheetContent side={"left"} className="w-[300px] sm:w-[340px]">
                                     <SheetHeader>
-                                        <SheetTitle className='text-left text-xl font-bold ml-3'>Brand</SheetTitle>
+                                        <SheetTitle className='text-left text-xl font-bold ml-3'>Artifact Gamepad
+                                            Controller</SheetTitle>
                                         <SheetDescription>
-                                            <SidebarMenu />
+                                            <SidebarMenu/>
                                         </SheetDescription>
                                     </SheetHeader>
                                 </SheetContent>
                             </Sheet>
                         </div>
-                        <a className="flex-none text-xl ml-4 font-semibold text-white" href="/dashboard">Brand</a>
+                        <span className="flex-none text-xl ml-4 font-semibold text-white">Artifact Gamepad Controller</span>
                     </div>
                     <div className="flex items-center">
                         <DarkModeSwitch
-                            className='mr-2 text-white sm:block'
+                          className='mr-2 text-white sm:block'
                             checked={theme?.theme === 'dark'}
                             onChange={onDarkModeToggle}
                             size={20} />

@@ -4,20 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="missing icons">
-      <change afterPath="$PROJECT_DIR$/src/app/controller/components/Gamepad.model.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/controller/components/Gamepad.svg.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/controller/components/Gamepad.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/controller/style.css" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="add gamepad to ui">
+      <change afterPath="$PROJECT_DIR$/src/app/controller/components/history/History.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +73,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "show.migrate.to.gradle.popup": "false",
     "ts.external.directory.path": "/Users/said/Documents/Tech/artifacts-gamepad-controller/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -91,6 +96,7 @@
       <recent name="$PROJECT_DIR$/src/app/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/controller/components/gamepad" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/components/ui/sidebar" />
     </key>
@@ -130,7 +136,7 @@
       <updated>1729585941029</updated>
       <workItem from="1729585942184" duration="362000" />
       <workItem from="1729625218036" duration="2916000" />
-      <workItem from="1729868003753" duration="10357000" />
+      <workItem from="1729868003753" duration="13788000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -172,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729879103145</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add gamepad to ui">
+      <option name="closed" value="true" />
+      <created>1729884252376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729884252376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +220,8 @@
     <MESSAGE value="blog page" />
     <MESSAGE value="renew nextjs/shadcn" />
     <MESSAGE value="missing icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="missing icons" />
+    <MESSAGE value="add gamepad to ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gamepad to ui" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

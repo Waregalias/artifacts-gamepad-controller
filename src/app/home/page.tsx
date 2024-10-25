@@ -28,11 +28,9 @@ function DashboardPage() {
               <CardTitle className='font-bold'>{`That's It`}</CardTitle>
               <CardDescription className='text-slate-300'>Replace this with your content</CardDescription>
             </CardHeader>
-
             <Button asChild>
               <a href="https://ui.shadcn.com/">Shadcn UI</a>
             </Button>
-
           </center>
         </CardContent>
       </Card>

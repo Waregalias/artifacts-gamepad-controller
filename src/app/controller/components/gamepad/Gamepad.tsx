@@ -1,19 +1,15 @@
 import {useState} from 'react';
 import {useGamepads} from 'react-gamepads';
-import GamepadSvg from "@/app/controller/components/Gamepad.svg";
-import {controllerToGamePadSVG} from "@/app/controller/components/Gamepad.model";
+import GamepadSvg from "@/app/controller/components/gamepad/Gamepad.svg";
+import {controllerToGamePadSVG} from "@/app/controller/components/gamepad/Gamepad.model";
 import {cn} from "@/lib/utils";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Disc} from "lucide-react";
-
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 
 /**
  * GamePad View
  * @constructor
  */
-
-function Gamepad({ gamePadEvent }: any) {
+function Gamepad({gamePadEvent}: any) {
   const myObj: { [index: string]: any } = {}
   const [gamepads, setGamepads] = useState(myObj);
   useGamepads(gamepads => setGamepads(gamepads));
@@ -34,18 +30,20 @@ function Gamepad({ gamePadEvent }: any) {
 
   return (
     <>
-      <Card className={cn("w-[380px]", 'controller')}>
-        <CardHeader>
-          <CardTitle>XBOX Controller</CardTitle>
-        </CardHeader>
-        <CardContent className="grid gap-4">
-          <div className="flex items-center space-x-4 rounded-md border p-4">
-            <GamepadSvg
-              {...buttonsClicked}
-            ></GamepadSvg>
-          </div>
-        </CardContent>
-      </Card>
+      <div className={"flex"}>
+        <Card className={cn("border-0")}>
+          <CardHeader>
+            <CardTitle>XBOX Controller</CardTitle>
+          </CardHeader>
+          <CardContent className="grid gap-4">
+            <div className="flex items-center space-x-4 rounded-md border p-4">
+              <GamepadSvg
+                {...buttonsClicked}
+              ></GamepadSvg>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </>
   )
 }
