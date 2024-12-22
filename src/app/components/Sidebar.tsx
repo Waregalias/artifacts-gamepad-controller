@@ -29,12 +29,6 @@ export function SidebarMenu() {
     const menus: Menu[] = [
         {
             label: "Discover",
-            name: "Home",
-            icon: <Home size={15} className="mr-2" />,
-            href: "/home",
-        },
-        {
-            label: "Discover",
             name: "Controller",
             icon: <Gamepad2 size={15} className="mr-2" />,
             href: "/controller",

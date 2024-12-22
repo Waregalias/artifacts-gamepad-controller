@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="add gamepad to ui">
-      <change afterPath="$PROJECT_DIR$/src/app/controller/components/history/History.tsx" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: add history of gamepad actions">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/Gamepad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/history/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/history/History.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,7 @@
       <list>
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -67,6 +65,7 @@
     "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/said/Documents/Tech/artifacts-gamepad-controller/src/app",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -121,8 +120,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
@@ -136,7 +135,11 @@
       <updated>1729585941029</updated>
       <workItem from="1729585942184" duration="362000" />
       <workItem from="1729625218036" duration="2916000" />
-      <workItem from="1729868003753" duration="13788000" />
+      <workItem from="1729868003753" duration="14095000" />
+      <workItem from="1730827250432" duration="792000" />
+      <workItem from="1734107215988" duration="1239000" />
+      <workItem from="1734424431592" duration="599000" />
+      <workItem from="1734897579172" duration="4215000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -186,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729884252376</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="wip: add history of gamepad actions">
+      <option name="closed" value="true" />
+      <created>1729887082547</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729887082547</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +214,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="next" />
                       </list>
                     </value>
                   </entry>
@@ -221,7 +232,8 @@
     <MESSAGE value="renew nextjs/shadcn" />
     <MESSAGE value="missing icons" />
     <MESSAGE value="add gamepad to ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gamepad to ui" />
+    <MESSAGE value="wip: add history of gamepad actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: add history of gamepad actions" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

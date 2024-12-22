@@ -17,7 +17,7 @@ function RootLayout({children}: {
         <div className="hidden sm:block">
           <SidebarMenu/>
         </div>
-        <main className="flex justify-center">{children}</main>
+        <main className="flex justify-center w-full mt-3">{children}</main>
       </div>
     </div>
   );

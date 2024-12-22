@@ -25,7 +25,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
     <html lang="en">
     <body className={inter.className}>
-    <main>
+    <main className={'w-1/2 m-auto'}>
       <Suspense>
         <Providers>{children}</Providers>
         <Toaster/>

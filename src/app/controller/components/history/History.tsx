@@ -13,7 +13,7 @@ import {
  * History View
  * @constructor
  */
-function History({historyActions}: any) {
+function History({historyActions}: any = []) {
   return (
     <>
       <Table>
@@ -27,7 +27,7 @@ function History({historyActions}: any) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {historyActions.map((history: any) => (
+          {historyActions?.map((history: any) => (
             <TableRow key={history.invoice}>
               <TableCell className="font-medium">{history.invoice}</TableCell>
               <TableCell>{history.paymentStatus}</TableCell>

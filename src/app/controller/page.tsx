@@ -1,13 +1,13 @@
 'use client'
 
+import {useState} from "react";
 import Gamepad from "@/app/controller/components/gamepad/Gamepad";
 import History from "@/app/controller/components/history/History";
-import {useState} from "react";
 
 function ControllerPage() {
-  const [historyActions, setHistoryActions] = useState([null])
+  const [historyActions, setHistoryActions]: any = useState([])
 
-  function handleGamePadEvent(data: any) {
+  function handleGamePadEvent(data: never) {
     historyActions.push(data);
     setHistoryActions(historyActions);
   }
@@ -15,7 +15,7 @@ function ControllerPage() {
   return (
     <>
       <Gamepad gamePadEvent={handleGamePadEvent}></Gamepad>
-      {/*<History>{...historyActions}</History>*/}
+      <History>{...historyActions}</History>
     </>
   )
 }
