@@ -1,24 +1,12 @@
-import {Toaster} from "@/components/ui/sonner"
-import {config} from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import type {Metadata} from 'next'
+import {config} from '@fortawesome/fontawesome-svg-core'
 import {Inter} from 'next/font/google'
-import Providers from "./components/Provider"
+import Modal from "@/app/components/Modal";
 import './globals.css'
-import {Suspense} from "react"
-
 
 config.autoAddCss = false
 
 const inter = Inter({subsets: ['latin']})
-
-export const metadata: Metadata = {
-  title: 'Login Page',
-  description: 'Login Page Description',
-  icons: {
-    icon: './favicon.ico',
-  },
-}
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
 
@@ -26,10 +14,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     <html lang="en">
     <body className={inter.className}>
     <main className={'w-1/2 m-auto'}>
-      <Suspense>
-        <Providers>{children}</Providers>
-        <Toaster/>
-      </Suspense>
+      <Modal>{children}</Modal>
     </main>
     </body>
     </html>

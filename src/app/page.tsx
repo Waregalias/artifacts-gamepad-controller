@@ -4,7 +4,7 @@ import {useRouter} from "next/navigation";
 
 function Home() {
   const router = useRouter();
-  router.replace('/home');
+  router.replace('/controller');
 
   return (
     <>
