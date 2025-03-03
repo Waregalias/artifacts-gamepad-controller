@@ -31,7 +31,7 @@ function Gamepad({gamePadEvent}: any) {
   return (
     <>
       <div className={"flex"}>
-        <Card className={cn("border-0")}>
+        <Card className={cn("border-0", "w-full")}>
           <CardHeader>
             <CardTitle>XBOX Controller</CardTitle>
           </CardHeader>

@@ -2,16 +2,10 @@
 
 import * as React from "react"
 import {
-  Bell,
-  Check,
-  Globe,
-  Home,
+  History,
   Keyboard,
   Link,
-  Lock,
   Menu,
-  MessageCircle,
-  Paintbrush,
   Settings,
   Video,
 } from "lucide-react"
@@ -34,11 +28,12 @@ import {
 
 const data = {
   nav: [
-    { name: "Home", icon: Menu },
-    { name: "Live", icon: Video },
-    { name: "Controllers", icon: Keyboard, href: '/controller' },
-    { name: "Api key", icon: Link, href: '/api' },
-    { name: "Advanced", icon: Settings },
+    {name: "Home", icon: Menu},
+    {name: "Live", icon: Video},
+    {name: "Controllers", icon: Keyboard, href: '/controller'},
+    {name: "History", icon: History, href: '/history'},
+    {name: "Api key", icon: Link, href: '/api'},
+    {name: "Advanced", icon: Settings},
   ],
 }
 
@@ -47,7 +42,8 @@ const Modal = ({children}: { children: React.ReactNode }) => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent onInteractOutside={(e) => e.preventDefault()} className="overflow-hidden p-0 md:max-h-[500px] md:max-w-[700px] lg:max-w-[800px]">
+      <DialogContent onInteractOutside={(e) => e.preventDefault()}
+                     className="overflow-hidden p-0 md:max-h-[500px] md:max-w-[700px] lg:max-w-[800px]">
         <DialogTitle className="sr-only">Settings</DialogTitle>
         <DialogDescription className="sr-only">
           Customize your settings here.
@@ -63,16 +59,11 @@ const Modal = ({children}: { children: React.ReactNode }) => {
                       <SidebarMenuItem key={item.name}>
                         <SidebarMenuButton
                           asChild
-                          isActive={item.name === "Messages & media"}
-                        >
+                          isActive={item.name === "Messages & media"}>
                           <a href={item.href}>
-                            <item.icon />
+                            <item.icon/>
                             {item.name}
                           </a>
-                          {/*<Link key={item.name} href={item.href}>*/}
-                          {/*  <item.icon />*/}
-                          {/*  {item.name}*/}
-                          {/*</Link>*/}
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}
