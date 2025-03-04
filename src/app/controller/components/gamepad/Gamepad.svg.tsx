@@ -9,6 +9,10 @@ function GamepadSvg({
                       directionRight,
                       analogLeft,
                       analogRight,
+                      TriggerFrontLeft,
+                      TriggerFrontRight,
+                      TriggerBackLeft,
+                      TriggerBackRight,
                       select,
                       start,
                       activeColor = "#2F80ED",
@@ -94,6 +98,42 @@ function GamepadSvg({
         className="start"
         d="M728 309v-49l72 23-72 26z"
         fill={start ? activeColor : inactiveColor}
+      />
+      <rect
+        className="trigger_back_left"
+        x={190}
+        y={20}
+        width={130}
+        height={45}
+        rx={10}
+        fill={TriggerBackLeft ? activeColor : inactiveColor}
+      />
+      <rect
+        className="trigger_front_left"
+        x={190}
+        y={85}
+        width={130}
+        height={30}
+        rx={10}
+        fill={TriggerFrontLeft ? activeColor : inactiveColor}
+      />
+      <rect
+        className="trigger_back_right"
+        x={960}
+        y={20}
+        width={130}
+        height={45}
+        rx={10}
+        fill={TriggerBackRight ? activeColor : inactiveColor}
+      />
+      <rect
+        className="trigger_front_right"
+        x={960}
+        y={85}
+        width={130}
+        height={30}
+        rx={10}
+        fill={TriggerFrontRight ? activeColor : inactiveColor}
       />
     </svg>
   );

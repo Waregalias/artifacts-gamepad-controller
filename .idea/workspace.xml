@@ -4,24 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: update ui with v0">
-      <change afterPath="$PROJECT_DIR$/src/app/history/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/history/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/history/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.tsx" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: clean code + add zustand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/history/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/history/components/history/History.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="next" />
+        <entry key="$PROJECT_DIR$" value="dependabot/npm_and_yarn/npm_and_yarn-95ac04bfa6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,32 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "next-v2",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/src/app",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/src/app&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -124,6 +116,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -160,6 +153,9 @@
       <workItem from="1740951463706" duration="16000" />
       <workItem from="1740951484912" duration="549000" />
       <workItem from="1741031627869" duration="3700000" />
+      <workItem from="1741040289834" duration="254000" />
+      <workItem from="1741076920524" duration="60000" />
+      <workItem from="1741116547084" duration="7793000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -233,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739403972544</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="wip: clean code + add zustand">
+      <option name="closed" value="true" />
+      <created>1741040330557</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741040330557</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +254,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="next" />
+                        <option value="origin/dependabot/npm_and_yarn/npm_and_yarn-95ac04bfa6" />
                       </list>
                     </value>
                   </entry>
@@ -271,21 +275,10 @@
     <MESSAGE value="wip: add history of gamepad actions" />
     <MESSAGE value="wip: add api key - next: send api key to controller for sending action" />
     <MESSAGE value="wip: update ui with v0" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip: update ui with v0" />
+    <MESSAGE value="wip: clean code + add zustand" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: clean code + add zustand" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

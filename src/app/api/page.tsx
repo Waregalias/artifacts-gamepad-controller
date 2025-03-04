@@ -14,29 +14,32 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import {toast} from "@/components/ui/use-toast";
+import {useStore} from "@/app/store";
+
 
 function ApiPage() {
   const FormSchema = z.object({
-    username: z.string().min(2, {
-      message: "Username must be at least 2 characters.",
-    }),
+    apiKey: z.string(),
   })
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      apiKey: "",
     },
   })
+  const updateApiKey = useStore((state: { updateApiKey: string }) => state.updateApiKey);
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    // toast({
-    //   title: "You submitted the following values:",
-    //   description: (
-    //     <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-    //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-    //     </pre>
-    //   ),
-    // })
+    updateApiKey(data.apiKey);
+    toast({
+      title: "Api token saved in local storage",
+      description: (
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        </pre>
+      ),
+    })
   }
 
   return (
@@ -44,7 +47,7 @@ function ApiPage() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
         <FormField
           control={form.control}
-          name="username"
+          name="apiKey"
           render={({ field }) => (
             <FormItem>
               <FormLabel>API Key</FormLabel>

@@ -1,14 +1,15 @@
 'use client'
 
-import {useState} from "react";
 import Gamepad from "@/app/controller/components/gamepad/Gamepad";
+import {useStore} from "@/app/store";
 
 function ControllerPage() {
-  const [historyActions, setHistoryActions]: any = useState([])
+  const actions = useStore((state: { actionsPad: [] }) => state.actionsPad);
+  const updateActions = useStore((state: { updateActions: string }) => state.updateActions);
 
-  function handleGamePadEvent(data: never) {
-    historyActions.push(data);
-    setHistoryActions(historyActions);
+  function handleGamePadEvent(newAction: { [key: string]: boolean }) {
+    if (Object.keys(newAction).some((value: string) => value === 'true'))
+      updateActions([...actions, newAction]);
   }
 
   return (

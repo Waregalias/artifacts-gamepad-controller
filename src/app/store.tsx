@@ -1,6 +1,8 @@
-import { create } from 'zustand'
+import {create} from 'zustand'
 
-const useStore = create((set) => ({
+export const useStore: any = create((set) => ({
+  apiKey: undefined,
   actionsPad: [],
+  updateApiKey: (key: string) => set({ apiKey: key }),
   updateActions: (actions: []) => set({ actionsPad: actions }),
 }))

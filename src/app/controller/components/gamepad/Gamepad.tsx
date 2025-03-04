@@ -1,9 +1,9 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useGamepads} from 'react-gamepads';
-import GamepadSvg from "@/app/controller/components/gamepad/Gamepad.svg";
-import {controllerToGamePadSVG} from "@/app/controller/components/gamepad/Gamepad.model";
 import {cn} from "@/lib/utils";
+import GamepadSvg from "@/app/controller/components/gamepad/Gamepad.svg";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {controllerToGamePadSVG} from "@/app/controller/components/gamepad/Gamepad.model";
 
 /**
  * GamePad View
@@ -17,7 +17,7 @@ function Gamepad({gamePadEvent}: any) {
   let buttonsClicked = {};
 
   if (gamepadId && gamepads[gamepadId].buttons && gamepads[gamepadId].buttons.length > 0) {
-    gamepads[gamepadId].buttons.map((button: { pressed: any; }, index: number) => {
+    gamepads[gamepadId].buttons.map((button: { pressed: boolean; }, index: number) => {
       const parameter = controllerToGamePadSVG[index] || 'notFound';
       buttonsClicked = {...buttonsClicked, [parameter]: button.pressed};
       handleGamePadEvent();
