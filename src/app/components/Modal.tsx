@@ -5,9 +5,8 @@ import {
   History,
   Keyboard,
   Link,
-  Menu,
   Settings,
-  Video,
+  Swords,
 } from "lucide-react"
 import {
   Dialog, DialogClose,
@@ -28,8 +27,7 @@ import {
 
 const data = {
   nav: [
-    {name: "Home", icon: Menu},
-    {name: "Live", icon: Video},
+    {name: "Artifact GPad", icon: Swords},
     {name: "Controllers", icon: Keyboard, href: '/controller'},
     {name: "History", icon: History, href: '/history'},
     {name: "Api key", icon: Link, href: '/api'},

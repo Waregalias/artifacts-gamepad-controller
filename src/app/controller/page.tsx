@@ -8,8 +8,11 @@ function ControllerPage() {
   const updateActions = useStore((state: { updateActions: string }) => state.updateActions);
 
   function handleGamePadEvent(newAction: { [key: string]: boolean }) {
-    if (Object.keys(newAction).some((value: string) => value === 'true'))
-      updateActions([...actions, newAction]);
+    const list = Object.fromEntries(Object.entries(newAction).filter(([, value]) => value));
+    if (Object.keys(list).length > 0) {
+      console.log([...actions, list])
+      updateActions([...actions, list]);
+    }
   }
 
   return (

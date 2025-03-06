@@ -1,9 +1,9 @@
 'use client'
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Button } from "@/components/ui/button"
+import {zodResolver} from "@hookform/resolvers/zod"
+import {useForm} from "react-hook-form"
+import {z} from "zod"
+import {Button} from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -13,7 +13,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+import {Input} from "@/components/ui/input"
 import {toast} from "@/components/ui/use-toast";
 import {useStore} from "@/app/store";
 
@@ -25,7 +25,7 @@ function ApiPage() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      apiKey: "",
+      apiKey: useStore((state: { apiKey: string }) => state.apiKey),
     },
   })
   const updateApiKey = useStore((state: { updateApiKey: string }) => state.updateApiKey);
@@ -36,7 +36,7 @@ function ApiPage() {
       title: "Api token saved in local storage",
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+          <span className="text-white">{JSON.stringify(data, null, 2)}</span>
         </pre>
       ),
     })
@@ -48,7 +48,7 @@ function ApiPage() {
         <FormField
           control={form.control}
           name="apiKey"
-          render={({ field }) => (
+          render={({field}) => (
             <FormItem>
               <FormLabel>API Key</FormLabel>
               <FormControl>
@@ -57,7 +57,7 @@ function ApiPage() {
               <FormDescription>
                 This is your private API Key.
               </FormDescription>
-              <FormMessage />
+              <FormMessage/>
             </FormItem>
           )}
         />

@@ -2,6 +2,19 @@ interface Model {
   [key: string]: string;
 }
 
+export type Gpad = {
+  [key: string]: {
+    axes: [],
+    buttons: [],
+    connected: boolean,
+    id: string,
+    index: number,
+    mapping: string,
+    timestamp: number,
+    vibrationActuator: { [key: string]: string },
+  };
+}
+
 export const controllerToGamePadSVG : Model = {
   '0': 'buttonDown',
   '1': 'buttonRight',

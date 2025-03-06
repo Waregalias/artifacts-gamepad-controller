@@ -1,6 +1,7 @@
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { Inter } from 'next/font/google'
+import {Toaster} from "@/components/ui/toaster";
 import Modal from "@/app/components/Modal"
 import './globals.css'
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
       <main className={'w-1/2 m-auto'}>
         <Modal>{children}</Modal>
+        <Toaster />
       </main>
       </body>
     </html>

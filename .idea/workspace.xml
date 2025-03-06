@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: clean code + add zustand">
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: try debounce gamepad event">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/models/Gamepad.model.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +78,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -98,6 +99,7 @@
       <recent name="$PROJECT_DIR$/src/app/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/controller/models" />
       <recent name="$PROJECT_DIR$/src/app/controller/components/gamepad" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/components/ui/sidebar" />
@@ -155,7 +157,9 @@
       <workItem from="1741031627869" duration="3700000" />
       <workItem from="1741040289834" duration="254000" />
       <workItem from="1741076920524" duration="60000" />
-      <workItem from="1741116547084" duration="7793000" />
+      <workItem from="1741116547084" duration="9351000" />
+      <workItem from="1741296435853" duration="1170000" />
+      <workItem from="1741297642920" duration="5188000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -237,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741040330557</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="wip: try debounce gamepad event">
+      <option name="closed" value="true" />
+      <created>1741127793293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741127793293</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +288,8 @@
     <MESSAGE value="wip: add api key - next: send api key to controller for sending action" />
     <MESSAGE value="wip: update ui with v0" />
     <MESSAGE value="wip: clean code + add zustand" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip: clean code + add zustand" />
+    <MESSAGE value="wip: try debounce gamepad event" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: try debounce gamepad event" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
