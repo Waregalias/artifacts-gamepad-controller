@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="done: save action with delay">
-      <change afterPath="$PROJECT_DIR$/public/images/skins/men1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/skins/men2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/skins/men3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/skins/women1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/skins/women2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/skins/women3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/settings/services/api.tsx" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="done: load character by token, save both on submit">
+      <change afterPath="$PROJECT_DIR$/src/app/controller/models/api.model.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/controller/services/api.service.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/team_engineering.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/team_engineering_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/settings/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/settings/services/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/services/api.service.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +161,7 @@
       <workItem from="1741296435853" duration="1170000" />
       <workItem from="1741297642920" duration="5655000" />
       <workItem from="1741365431007" duration="602000" />
-      <workItem from="1741372796446" duration="9893000" />
+      <workItem from="1741372796446" duration="13154000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -270,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741303026677</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="done: load character by token, save both on submit">
+      <option name="closed" value="true" />
+      <created>1741386041813</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741386041813</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +308,8 @@
     <MESSAGE value="wip: clean code + add zustand" />
     <MESSAGE value="wip: try debounce gamepad event" />
     <MESSAGE value="done: save action with delay" />
-    <option name="LAST_COMMIT_MESSAGE" value="done: save action with delay" />
+    <MESSAGE value="done: load character by token, save both on submit" />
+    <option name="LAST_COMMIT_MESSAGE" value="done: load character by token, save both on submit" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

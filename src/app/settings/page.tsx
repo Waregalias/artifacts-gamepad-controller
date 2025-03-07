@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/form"
 import {Input} from "@/components/ui/input"
 import {toast} from "@/components/ui/use-toast";
-import {getCharacters} from "@/app/settings/services/api";
+import {getCharacters} from "@/app/settings/services/api.service";
 import {ArtifactCharacter} from "@/app/settings/models/api.model";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
 
@@ -36,7 +36,11 @@ function ApiPage() {
       character: useStore((state: { character: string }) => state.character),
     },
   })
-  const [characters, setCharacters] = useState<ArtifactCharacter[]>([]);
+  const initialCharacter = useStore((state: { character: string }) => state.character);
+  const initialSkin = useStore((state: { skin: string }) => state.skin);
+  const [characters, setCharacters] = useState<ArtifactCharacter[]>([
+    {name: initialCharacter, skin: initialSkin}
+  ]);
   const updateApiKeyAndCharacters = useStore((state: {
     updateApiKeyAndCharacters: { apiKey: string, character: string }
   }) => state.updateApiKeyAndCharacters);
@@ -47,7 +51,11 @@ function ApiPage() {
   }
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    updateApiKeyAndCharacters(data.apiKey, data.character);
+    updateApiKeyAndCharacters(
+      data.apiKey,
+      data.character,
+      characters.find((character) => character.name === data.character)?.skin || ''
+    );
     toast({
       title: "Token and character locally saved. Let's play !",
     })
@@ -64,7 +72,7 @@ function ApiPage() {
               <FormItem>
                 <FormLabel>API Key</FormLabel>
                 <FormControl>
-                  <Input placeholder="shadcn" {...field} />
+                  <Input placeholder="eyJ0fXAi0i..." {...field} />
                 </FormControl>
                 <FormDescription>
                   This is your private API Key.
@@ -87,28 +95,32 @@ function ApiPage() {
                   name="character"
                   render={({field}) => (
                     <Select
-                      disabled={characters.length === 0}
+                      disabled={characters?.[0]?.name === ''}
                       onValueChange={field.onChange} // Bind onChange to update form state
                       value={field.value} // Bind value to form state
                     >
                       <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Select a theme"/>
+                        <SelectValue placeholder="Select a character"/>
                       </SelectTrigger>
                       <SelectContent>
-                        {characters.map((character) => (
-                          <SelectItem key={character.account} value={character.name}>
-                            <div className="flex items-center">
-                              <Image
-                                src={`/images/skins/${character.skin}.png`}
-                                alt={`${character.name}'s skin`}
-                                width={16}
-                                height={16}
-                                className="mr-3"
-                              />
-                              {character.name}
-                            </div>
-                          </SelectItem>
-                        ))}
+                        {characters
+                          .filter((character) => character.name)
+                          .map((character, index) => (
+                            <SelectItem key={character.account || character.name || index} value={character.name ?? ''}>
+                              <div className="flex items-center">
+                                <Image
+                                  src={`/images/skins/${character.skin}.png`}
+                                  alt={`${character.name}'s skin`}
+                                  width={16}
+                                  height={16}
+                                  className="mr-3"
+                                  style={{width: 'auto', height: 'auto'}}
+                                  priority
+                                />
+                                {character.name}
+                              </div>
+                            </SelectItem>
+                          ))}
                       </SelectContent>
                     </Select>
                   )}

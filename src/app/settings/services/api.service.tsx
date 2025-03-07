@@ -7,7 +7,7 @@ export const getCharacters = async (apiKey: string): Promise<ArtifactCharacter[]
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
       },
-    }) // move apikey to header
+    })
     .then(response => response.json())
     .then((response) => response.data);
 }
