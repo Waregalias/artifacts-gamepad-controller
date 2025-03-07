@@ -5,13 +5,14 @@ export const useStore: any = create(
   persist(
     (set) => ({
       apiKey: '',
+      character: '',
       actionsPad: [],
-      updateApiKey: (key: string) => set({apiKey: key}),
+      updateApiKeyAndCharacters: (apiKey: string, character: string) => set({apiKey, character}),
       updateActions: (actions: []) => set({actionsPad: actions}),
     }),
     {
       name: 'store',
-      partialize: (state) => ({apiKey: state.apiKey}),
+      partialize: (state: {apiKey: string, character: string, actionsPad: string[]}) => ({apiKey: state.apiKey, character: state.character}),
     }
   )
 );

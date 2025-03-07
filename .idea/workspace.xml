@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: try debounce gamepad event">
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="done: save action with delay">
+      <change afterPath="$PROJECT_DIR$/public/images/skins/men1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/skins/men2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/skins/men3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/skins/women1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/skins/women2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/skins/women3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/services/api.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/team_engineering.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/team_engineering_white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/models/Gamepad.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/components/gamepad/Gamepad.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,33 +66,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/src/app&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/public/img",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/said/Documents/Tech/Front/artifacts-gamepad-controller/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -95,10 +104,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img/skins" />
       <recent name="$PROJECT_DIR$/src/app/controller/models" />
       <recent name="$PROJECT_DIR$/src/app/controller/components/gamepad" />
       <recent name="$PROJECT_DIR$/src/app" />
@@ -159,7 +170,9 @@
       <workItem from="1741076920524" duration="60000" />
       <workItem from="1741116547084" duration="9351000" />
       <workItem from="1741296435853" duration="1170000" />
-      <workItem from="1741297642920" duration="5188000" />
+      <workItem from="1741297642920" duration="5655000" />
+      <workItem from="1741365431007" duration="602000" />
+      <workItem from="1741372796446" duration="9893000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -249,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741127793293</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="done: save action with delay">
+      <option name="closed" value="true" />
+      <created>1741303026677</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741303026677</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +287,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/dependabot/npm_and_yarn/npm_and_yarn-95ac04bfa6" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -289,7 +310,8 @@
     <MESSAGE value="wip: update ui with v0" />
     <MESSAGE value="wip: clean code + add zustand" />
     <MESSAGE value="wip: try debounce gamepad event" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip: try debounce gamepad event" />
+    <MESSAGE value="done: save action with delay" />
+    <option name="LAST_COMMIT_MESSAGE" value="done: save action with delay" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

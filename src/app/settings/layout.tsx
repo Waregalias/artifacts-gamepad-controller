@@ -4,7 +4,7 @@ function RootLayout({children}: {
   children: React.ReactNode;
 }) {
   return (
-    <main className="w-full controller">{children}</main>
+    <main className="w-full p-2 controller">{children}</main>
   );
 }
 

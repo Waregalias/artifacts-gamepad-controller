@@ -4,7 +4,6 @@ import * as React from "react"
 import {
   History,
   Keyboard,
-  Link,
   Settings,
   Swords,
 } from "lucide-react"
@@ -30,8 +29,7 @@ const data = {
     {name: "Artifact GPad", icon: Swords},
     {name: "Controllers", icon: Keyboard, href: '/controller'},
     {name: "History", icon: History, href: '/history'},
-    {name: "Api key", icon: Link, href: '/api'},
-    {name: "Advanced", icon: Settings},
+    {name: "Settings", icon: Settings, href: '/settings'},
   ],
 }
 

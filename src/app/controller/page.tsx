@@ -10,7 +10,7 @@ function ControllerPage() {
   function handleGamePadEvent(newAction: { [key: string]: boolean }) {
     const list = Object.fromEntries(Object.entries(newAction).filter(([, value]) => value));
     if (Object.keys(list).length > 0) {
-      console.log([...actions, list])
+      // console.log([...actions, list]);
       updateActions([...actions, list]);
     }
   }
