@@ -20,30 +20,30 @@ import {
 import {Input} from "@/components/ui/input"
 import {toast} from "@/components/ui/use-toast";
 import {getCharacters} from "@/app/settings/services/api.service";
-import {ArtifactCharacter} from "@/app/settings/models/api.model";
+import {ArtifactCharacter} from "@/app/controller/models/artifact.model";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
 
 
 function ApiPage() {
   const FormSchema = z.object({
     apiKey: z.string(),
-    character: z.string(),
+    name: z.string(),
   })
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       apiKey: useStore((state: { apiKey: string }) => state.apiKey),
-      character: useStore((state: { character: string }) => state.character),
+      name: useStore((state: { character: ArtifactCharacter }) => state.character.name),
     },
   })
-  const initialCharacter = useStore((state: { character: string }) => state.character);
-  const initialSkin = useStore((state: { skin: string }) => state.skin);
+  const initialName = useStore((state: { character: ArtifactCharacter }) => state.character.name);
+  const initialSkin = useStore((state: { character: ArtifactCharacter }) => state.character.skin);
   const [characters, setCharacters] = useState<ArtifactCharacter[]>([
-    {name: initialCharacter, skin: initialSkin}
+    {name: initialName, skin: initialSkin}
   ]);
-  const updateApiKeyAndCharacters = useStore((state: {
-    updateApiKeyAndCharacters: { apiKey: string, character: string }
-  }) => state.updateApiKeyAndCharacters);
+  const updateArtifactCharacter = useStore((state: {
+    updateArtifactCharacter: { apiKey: string, name: string }
+  }) => state.updateArtifactCharacter);
 
   async function loadCharacters() {
     const apiKey = form.getValues('apiKey');
@@ -51,10 +51,9 @@ function ApiPage() {
   }
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    updateApiKeyAndCharacters(
+    updateArtifactCharacter(
       data.apiKey,
-      data.character,
-      characters.find((character) => character.name === data.character)?.skin || ''
+      characters.find((character) => character.name === data.name),
     );
     toast({
       title: "Token and character locally saved. Let's play !",
@@ -85,17 +84,17 @@ function ApiPage() {
         </div>
         <FormField
           control={form.control}
-          name="character"
+          name="name"
           render={() => (
             <FormItem>
               <FormLabel>Select your character</FormLabel>
               <FormControl>
                 <Controller
                   control={form.control}
-                  name="character"
+                  name="name"
                   render={({field}) => (
                     <Select
-                      disabled={characters?.[0]?.name === ''}
+                      disabled={characters?.[0]?.name === undefined}
                       onValueChange={field.onChange} // Bind onChange to update form state
                       value={field.value} // Bind value to form state
                     >

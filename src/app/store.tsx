@@ -1,24 +1,20 @@
 import {create} from 'zustand'
 import {persist} from "zustand/middleware";
+import {ArtifactCharacter} from "@/app/settings/models/api.model";
 
 export const useStore: any = create(
   persist(
     (set) => ({
       apiKey: '',
       character: '',
-      skin: '',
-      actionsPad: [],
-      updateApiKeyAndCharacters: (apiKey: string, character: string, skin: string) => set({apiKey, character, skin}),
-      updateActions: (actions: []) => set({actionsPad: actions}),
+      updateArtifactCharacter: (apiKey: string, character: ArtifactCharacter) => set({apiKey, character}),
     }),
     {
       name: 'store',
       partialize: (state: {
         apiKey: string,
-        character: string,
-        skin: string,
-        actionsPad: string[]
-      }) => ({apiKey: state.apiKey, character: state.character, skin: state.skin, actionsPad: state.actionsPad}),
+        character: ArtifactCharacter,
+      }) => ({apiKey: state.apiKey, character: state.character}),
     }
   )
 );

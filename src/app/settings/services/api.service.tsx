@@ -1,4 +1,4 @@
-import {ArtifactCharacter} from "@/app/settings/models/api.model";
+import {ArtifactCharacter} from "@/app/controller/models/artifact.model";
 
 export const getCharacters = async (apiKey: string): Promise<ArtifactCharacter[]> => {
   return fetch(`https://api.artifactsmmo.com/my/characters`,
