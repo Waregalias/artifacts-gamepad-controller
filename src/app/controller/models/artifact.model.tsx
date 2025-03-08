@@ -109,12 +109,12 @@ export type ArtifactDestination = {
 };
 
 export enum ArtifactActionMoveX {
-  directionUp = 1,
-  directionDown = -1,
+  directionLeft = -1,
+  directionRight = 1,
 }
 
 export enum ArtifactActionMoveY {
-  directionLeft = -1,
-  directionRight = 1,
+  directionUp = 1,
+  directionDown = -1,
 }
 

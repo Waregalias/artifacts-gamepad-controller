@@ -10,11 +10,12 @@ import {
   ArtifactResponse
 } from "@/app/controller/models/artifact.model";
 import {move} from "@/app/controller/services/api.service";
+import {toast} from "@/components/ui/use-toast";
 
 function ControllerPage() {
   const [loading, setLoading] = useState<boolean>(false)
   const apiKey = useStore((state: { apiKey: string }) => state.apiKey);
-  const currentCharacter = useStore((state: { character: ArtifactCharacter }) => state.character.name);
+  const currentCharacter = useStore((state: { character: ArtifactCharacter }) => state.character);
   const updateArtifactCharacter = useStore((state: {
     updateArtifactCharacter: { apiKey: string, name: string }
   }) => state.updateArtifactCharacter);
@@ -38,6 +39,16 @@ function ControllerPage() {
           .then((response: ArtifactResponse) => {
             updateArtifactCharacter(apiKey, response.character);
             setLoading(false);
+          })
+          .catch((error: Error) => {
+            toast({
+              title: "Error while moving",
+              description: (
+                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <span className="text-white">{JSON.stringify(error, null, 2)}</span>
+        </pre>
+              ),
+            });
           });
       });
     }

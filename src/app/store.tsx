@@ -1,6 +1,6 @@
 import {create} from 'zustand'
 import {persist} from "zustand/middleware";
-import {ArtifactCharacter} from "@/app/settings/models/api.model";
+import {ArtifactCharacter} from "@/app/controller/models/artifact.model";
 
 export const useStore: any = create(
   persist(

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="done: optimize setting form rendering">
-      <change afterPath="$PROJECT_DIR$/src/app/controller/models/artifact.model.tsx" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="done: optimize setting form rendering&#10;wip: sending move action to artifact client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/models/artifact.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/models/artifact.model.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/services/api.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/services/api.service.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/models/api.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/settings/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/settings/services/api.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/services/api.service.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +160,7 @@
       <workItem from="1741297642920" duration="5655000" />
       <workItem from="1741365431007" duration="602000" />
       <workItem from="1741372796446" duration="13235000" />
-      <workItem from="1741470192559" duration="5004000" />
+      <workItem from="1741470192559" duration="5925000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -277,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741389342178</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="done: optimize setting form rendering&#10;wip: sending move action to artifact client">
+      <option name="closed" value="true" />
+      <created>1741475518732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741475518732</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +325,8 @@
     <MESSAGE value="done: save action with delay" />
     <MESSAGE value="done: load character by token, save both on submit" />
     <MESSAGE value="done: optimize setting form rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="done: optimize setting form rendering" />
+    <MESSAGE value="done: optimize setting form rendering&#10;wip: sending move action to artifact client" />
+    <option name="LAST_COMMIT_MESSAGE" value="done: optimize setting form rendering&#10;wip: sending move action to artifact client" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
