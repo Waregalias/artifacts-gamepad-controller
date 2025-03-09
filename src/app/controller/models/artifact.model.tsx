@@ -114,7 +114,7 @@ export enum ArtifactActionMoveX {
 }
 
 export enum ArtifactActionMoveY {
-  directionUp = 1,
-  directionDown = -1,
+  directionUp = -1,
+  directionDown = 1,
 }
 

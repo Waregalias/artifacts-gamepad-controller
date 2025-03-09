@@ -1,4 +1,23 @@
-import {ArtifactResponse} from "@/app/controller/models/artifact.model";
+import {ArtifactCharacter, ArtifactResponse} from "@/app/controller/models/artifact.model";
+
+export const getCharacter = async (apiKey: string, name: string): Promise<ArtifactCharacter> => {
+  return fetch(`https://api.artifactsmmo.com/characters/${name}`,
+    {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    }).then(res => res.json())
+    .then(json => {
+      if (json.error) {
+        throw new Error(json.error);
+      }
+      return json.data;
+    })
+    .catch(err => {
+      throw err;
+    });
+}
 
 export const move = async (apiKey: string, name: string, fx: number, fy: number, dx: number, dy: number): Promise<ArtifactResponse> => {
   return fetch(`https://api.artifactsmmo.com/my/${name}/action/move`,
@@ -11,7 +30,14 @@ export const move = async (apiKey: string, name: string, fx: number, fy: number,
       },
       body: `{"x":${fx + dx},"y":${fy + dy}}`,
     })
-    .then(response => response.json())
-    .then((response) => response.data)
-    .catch((error => error.data));
+    .then(res => res.json())
+    .then(json => {
+      if (json.error) {
+        throw new Error(json.error);
+      }
+      return json.data;
+    })
+    .catch(err => {
+      throw err;
+    });
 }

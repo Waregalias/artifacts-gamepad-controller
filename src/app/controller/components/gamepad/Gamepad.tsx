@@ -57,7 +57,7 @@ function Gamepad({gamePadEvent}: GamepadProps) {
             <CardTitle>XBOX Controller</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4">
-            <div className="flex items-center space-x-4 rounded-md border p-4">
+            <div className="flex items-center space-x-4 rounded-md border pt-2 pb-2 p-6">
               <GamepadSvg
                 {...currentButtonsClicked}
               ></GamepadSvg>

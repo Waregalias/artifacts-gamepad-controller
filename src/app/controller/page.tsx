@@ -9,8 +9,10 @@ import {
   ArtifactCharacter,
   ArtifactResponse
 } from "@/app/controller/models/artifact.model";
-import {move} from "@/app/controller/services/api.service";
+import {getCharacter, move} from "@/app/controller/services/api.service";
 import {toast} from "@/components/ui/use-toast";
+import {Button} from "@/components/ui/button";
+import * as React from "react";
 
 function ControllerPage() {
   const [loading, setLoading] = useState<boolean>(false)
@@ -19,6 +21,22 @@ function ControllerPage() {
   const updateArtifactCharacter = useStore((state: {
     updateArtifactCharacter: { apiKey: string, name: string }
   }) => state.updateArtifactCharacter);
+
+
+  function refreshCharacter() {
+    setLoading(true);
+    getCharacter(
+      apiKey,
+      currentCharacter.name,
+    ).then((character: ArtifactCharacter) => {
+      updateArtifactCharacter(apiKey, character);
+      setLoading(false);
+    }).catch(() => {
+      toast({
+        title: "Error during refresh character, select character again",
+      });
+    });
+  }
 
   function handleGamePadEvent(newAction: { [key: string]: boolean }) {
     if (loading) {
@@ -36,8 +54,8 @@ function ControllerPage() {
           currentCharacter.y,
           ArtifactActionMoveX[key] ?? 0,
           ArtifactActionMoveY[key] ?? 0)
-          .then((response: ArtifactResponse) => {
-            updateArtifactCharacter(apiKey, response.character);
+          .then((res: ArtifactResponse) => {
+            updateArtifactCharacter(apiKey, res.character);
             setLoading(false);
           })
           .catch((error: Error) => {
@@ -55,7 +73,15 @@ function ControllerPage() {
   }
 
   return (
-    <Gamepad gamePadEvent={handleGamePadEvent}></Gamepad>
+    <>
+      <div className="w-full flex justify-end items-center">
+        <span className={"mr-5"}>Your position: x-{currentCharacter.x} ; y-{currentCharacter.y}</span>
+        <Button className={"mr-5"} type={"button"} onClick={refreshCharacter}>
+          Refresh
+        </Button>
+      </div>
+      <Gamepad gamePadEvent={handleGamePadEvent}></Gamepad>
+    </>
   )
 }
 
