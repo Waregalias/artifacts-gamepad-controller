@@ -6,6 +6,7 @@ import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {controllerToGamePadSVG, Gpad} from "@/app/controller/models/Gamepad.model";
 
 interface GamepadProps {
+  loading: boolean;
   gamePadEvent: (buttons: { [key: string]: boolean }) => void;
 }
 
@@ -13,7 +14,7 @@ interface GamepadProps {
  * GamePad View
  * @constructor
  */
-function Gamepad({gamePadEvent}: GamepadProps) {
+function Gamepad({loading, gamePadEvent}: GamepadProps) {
   const [gamepads, setGamepads] = useState<Gpad>({});
   const [currentButtonsClicked, setCurrentButtonsClicked] = useState<{ [key: string]: boolean }>({});
   useGamepads(gamepads => setGamepads(gamepads as unknown as Gpad));
@@ -26,7 +27,7 @@ function Gamepad({gamePadEvent}: GamepadProps) {
     if (gamepadId && gamepads && gamepads[gamepadId].buttons && gamepads[gamepadId].buttons.length > 0) {
       gamepads[gamepadId].buttons.forEach((button: { pressed: boolean }, index: number) => {
         const parameter = controllerToGamePadSVG[index] || 'notFound';
-        newButtonsClicked = { ...newButtonsClicked, [parameter]: button.pressed };
+        newButtonsClicked = {...newButtonsClicked, [parameter]: button.pressed};
       });
       setCurrentButtonsClicked(newButtonsClicked);
     }
@@ -57,10 +58,15 @@ function Gamepad({gamePadEvent}: GamepadProps) {
             <CardTitle>XBOX Controller</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4">
-            <div className="flex items-center space-x-4 rounded-md border pt-2 pb-2 p-6">
-              <GamepadSvg
-                {...currentButtonsClicked}
-              ></GamepadSvg>
+            <div className="flex w-10/12 items-center space-x-4 rounded-md border pt-2 pb-2 p-6">
+              {!loading && (
+                <GamepadSvg
+                  {...currentButtonsClicked}
+                ></GamepadSvg>
+              )}
+              {loading && (
+                <span>Loading...</span>
+              )}
             </div>
           </CardContent>
         </Card>

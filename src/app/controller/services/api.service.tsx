@@ -19,7 +19,7 @@ export const getCharacter = async (apiKey: string, name: string): Promise<Artifa
     });
 }
 
-export const move = async (apiKey: string, name: string, fx: number, fy: number, dx: number, dy: number): Promise<ArtifactResponse> => {
+export const move = async (apiKey: string, name: string = 'none', fx: number = 0, fy: number = 0, dx: number, dy: number): Promise<ArtifactResponse> => {
   return fetch(`https://api.artifactsmmo.com/my/${name}/action/move`,
     {
       method: 'POST',
