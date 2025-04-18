@@ -1,12 +1,15 @@
 {
   "name": "artifacts-gamepad-controller",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "main.js",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "electron": "electron .",
+    "package": "electron-packager ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -30,7 +33,7 @@
     "@tanstack/react-table": "^8.20.5",
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.453.0",
-    "next": "15.2.3",
+    "next": "15.2.4",
     "next-nprogress-bar": "^2.3.14",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
@@ -47,6 +50,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "electron": "^35.1.5",
+    "electron-packager": "^17.1.2",
     "eslint": "^8",
     "eslint-config-next": "15.0.0",
     "postcss": "^8",
