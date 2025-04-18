@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="wip: move actions to manager before include skills btn">
-      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/app.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="daf52e2f-621c-4672-b51b-440f8c2cc92d" name="Changes" comment="update doc for electron">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +174,7 @@
       <workItem from="1741721766336" duration="5669000" />
       <workItem from="1743108765998" duration="47000" />
       <workItem from="1743108821806" duration="17000" />
-      <workItem from="1744978560016" duration="8487000" />
+      <workItem from="1744978560016" duration="8579000" />
     </task>
     <task id="LOCAL-00001" summary="init nextjs project">
       <option name="closed" value="true" />
@@ -325,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741727607371</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update doc for electron">
+      <option name="closed" value="true" />
+      <created>1744994631903</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744994631903</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +375,8 @@
     <MESSAGE value="wip: sending move action to artifact client" />
     <MESSAGE value="done: sending move action to artifact client&#10;next: loader on controller and refresh during update" />
     <MESSAGE value="wip: move actions to manager before include skills btn" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip: move actions to manager before include skills btn" />
+    <MESSAGE value="update doc for electron" />
+    <option name="LAST_COMMIT_MESSAGE" value="update doc for electron" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

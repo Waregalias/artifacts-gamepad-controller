@@ -11,7 +11,7 @@
     A useful tool for playing Artifacts MMO with your controller
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://waregalias.github.io/artifacts-gamepad-controller">View Demo</a>
     &middot;
     <a href="https://github.com/Waregalias/artifacts-gamepad-controller/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
